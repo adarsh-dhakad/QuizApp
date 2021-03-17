@@ -11,7 +11,7 @@ class Score_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_score_)
         val tv_name = findViewById<TextView>(R.id.tv_name)
-        val tv_score = findViewById<TextView>(R.id.tv_name)
+        val tv_score = findViewById<TextView>(R.id.tv_score)
         val btn_submit = findViewById<Button>(R.id.btn_finish)
        val user_name = intent.getStringExtra(Constants.USER_NAME)
         tv_name.text = user_name
