@@ -50,10 +50,10 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
         if(mCurrentPosition == mQuestionList!!.size){
             val btn_submit = findViewById<Button>(R.id.btn_submit)
-            btn_submit.setText("FINISH")
+            btn_submit.text = "FINISH"
         }else{
             val btn_submit = findViewById<Button>(R.id.btn_submit)
-            btn_submit.setText("SUBMIT")
+            btn_submit.text = "SUBMIT"
         }
 
         progressBar.progress = mCurrentPosition
@@ -62,20 +62,20 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tv_question.text = question!!.question
         val iv_flag = findViewById<ImageView>(R.id.iv_flag)
         iv_flag.setImageResource(question.image)
-        var tv_option_one = findViewById<TextView>(R.id.tv_optionOne)
-       tv_option_one.text = question!!.optionOne
+        val tv_option_one = findViewById<TextView>(R.id.tv_optionOne)
+       tv_option_one.text = question.optionOne
         val tv_optionTwo = findViewById<TextView>(R.id.tv_optionTwo)
-        tv_optionTwo.text = question!!.optionTwo
+        tv_optionTwo.text = question.optionTwo
         val tv_optionThree = findViewById<TextView>(R.id.tv_optionThree)
-        tv_optionThree.text = question!!.optionThree
+        tv_optionThree.text = question.optionThree
         val tv_optionFour = findViewById<TextView>(R.id.tv_optionFour)
-        tv_optionFour.text = question!!.optionFour
+        tv_optionFour.text = question.optionFour
       //  val btn_submit = findViewById<Button>(R.id.btn_submit)
 
 
     }
     private  fun defaultOptionaView(){
-        var tv_option_one = findViewById<TextView>(R.id.tv_optionOne)
+        val tv_option_one = findViewById<TextView>(R.id.tv_optionOne)
         val tv_optionTwo = findViewById<TextView>(R.id.tv_optionTwo)
         val tv_optionThree = findViewById<TextView>(R.id.tv_optionThree)
         val tv_optionFour = findViewById<TextView>(R.id.tv_optionFour)
@@ -135,9 +135,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
             }else{
 
                 val question = mQuestionList?.get(mCurrentPosition -1)
-                if(mSelectedOptionPosition == question!!.correctAnswer ){
 
-                }
                 if(question!!.correctAnswer != mSelectedOptionPosition){
 
                     answerView(mSelectedOptionPosition,R.drawable.wrong_option_border_bg)
